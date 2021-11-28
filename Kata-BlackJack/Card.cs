@@ -3,11 +3,13 @@ namespace Kata_BlackJack
 {
     public class Card
     {
-        public String Suit { get; set; }
+        public string Suit { get; set; }
+        public string Value { get; set; }
 
-        public Card(String suit)
+        public Card(String suit, String value)
         {
-            Suit = suit;''
+            Suit = suit;
+            Value = value;
         }
     }
 }
