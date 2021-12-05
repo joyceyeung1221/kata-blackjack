@@ -11,9 +11,11 @@ namespace Kata_BlackJack
             PopulateList();
         }
 
-        public void Draw()
+        public Card Draw()
         {
+            var card = cards[0];
             cards.RemoveAt(0);
+            return card;
         }
 
         public int GetSize()
@@ -28,5 +30,16 @@ namespace Kata_BlackJack
                 cards.Add(new Card("WHATEVER", "Heart"));
             }
         }
+
+        public Card[] Deal()
+        {
+            var dealtCards = new Card[2];
+            for (int i = 0; i < 2; i++)
+            {
+                dealtCards[i] = Draw();
+            }
+            return dealtCards;
+        }
+
     } 
 }

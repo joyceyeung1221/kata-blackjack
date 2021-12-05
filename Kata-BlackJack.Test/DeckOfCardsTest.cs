@@ -17,5 +17,14 @@ namespace Kata_BlackJack.Test
 
             Assert.True(deck.GetSize() == 51);
         }
+
+        [Fact]
+        public void ShouldReturnTwoCardsInAnArray_WhenDealIsCalled()
+        {
+            var deck = new DeckOfCards();
+            var result = deck.Deal();
+
+            Assert.True(result.Length == 2);
+        }
     }
 }
